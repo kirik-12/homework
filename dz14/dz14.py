@@ -27,7 +27,7 @@ name_lst, price_lst, change_1_hour_lst, change_24_hours_lst, change_7_days_lst, 
 
 for i in range(100):
     name_lst.append(name[i].text.strip())
-    price_lst.append(price[i].text.strip())
+    price_lst.append(price[i].text.strip().replace('$','').replace(',',''))
     change_1_hour_lst.append(change_1_hour[i].text.strip())
     change_24_hours_lst.append(change_24_hours[i].text.strip())
     change_7_days_lst.append(change_7_days[i].text.strip())
